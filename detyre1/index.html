@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Invoice Generator</h1>
+        <div id="invoice">
+            <div class="invoice-header">
+                <label for="clientName">Client Name:</label>
+                <input type="text" id="clientName">
+                <p>Date: <span id="invoiceDate"></span></p>
+                <p>Invoice Number: <span id="invoiceNumber"></span></p>
+            </div>
+            <button id="addRowBtn">+ Add Product</button>
+            <table id="invoiceTable">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be added here dynamically -->
+                </tbody>
+            </table>
+            <p class="total-amount">Total: $<span id="totalAmount">0.00</span></p>
+            <button id="generateInvoice">Generate Invoice</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+</body>
+</html>

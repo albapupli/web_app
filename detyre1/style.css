@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    max-width: 800px;
+}
+
+.invoice-header input {
+    margin: 10px 0;
+    display: block;
+}
+
+#invoiceTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#invoiceTable th, #invoiceTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#invoiceTable th {
+    background-color: #f2f2f2;
+}
+
+.total-amount {
+    margin-top: 20px;
+    float: right;
+    font-size: 20px;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
