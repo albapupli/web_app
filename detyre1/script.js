@@ -6,6 +6,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 let invoiceNumber = 1;
 
+function refreshPage(){
+   // const tableBody = document.getElementById('invoiceTable').getElementsByTagName('tbody');
+    document.getElementById('clientName').value = '';
+
+    var Parent = document.getElementById('bodyTest');
+while(Parent.hasChildNodes())
+{
+   Parent.removeChild(Parent.firstChild);
+}
+calculateTotalAmount();
+}
+
 function addInvoiceRow() {
     const tableBody = document.getElementById('invoiceTable').getElementsByTagName('tbody')[0];
     const newRow = tableBody.insertRow();
@@ -45,6 +57,7 @@ function generateInvoiceDetails() {
     const currentDate = new Date();
     document.getElementById('invoiceDate').textContent = currentDate.toLocaleDateString();
     document.getElementById('invoiceNumber').textContent = `INV-${invoiceNumber++}`;
+    
 }
 
 function generatePDF() {
@@ -95,4 +108,7 @@ function generatePDF() {
 
     // Save the PDF
     doc.save(`Invoice_${invoiceNumber}.pdf`);
+    generateInvoiceDetails();
+    refreshPage();
+  
 }
